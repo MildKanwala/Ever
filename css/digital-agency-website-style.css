@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&family=Playfair+Display:wght@400;700;800;900&family=Raleway:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-g: 'Radio Canada', sans-serif;
+    --font-n: 'Nunito Sans', sans-serif;
+    --color-normal-font: #ffffff70;
+    --color-bg: #19191B;
+    --color-purple: #5454D4;
+    --color-logo-gradient: linear-gradient(to right, #57e0ff, #2bfff1, #cac9ff, #d79fff);
+}
+
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: var(--font-n);
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    padding-top: 6rem;
+}
+
+/* ========================= scrol ========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #717572c6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 0 3px #d8d8d8;
+    background: #464646c6;
+}
+
+/* ========================= navbar ========================= */
+
+.navbar {
+    height: 6rem;
+    width: 100%;
+    position: fixed;
+    background: #19191bcc;
+    z-index: 999;
+    backdrop-filter: blur(90px);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.flex-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    cursor: default;
+}
+
+.icon-logo img {
+    transform: scale(0.8);
+}
+
+.name-logo {
+    padding: 0.3rem;
+}
+
+.navbar .menu {
+    max-width: 40%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .menu li {
+    list-style: none;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: #ffffffcf;
+    font-size: 0.9rem;
+}
+
+.navbar .menu li:hover a {
+    color: var(--color-purple);
+}
+
+.navbar button {
+    color: #fff;
+    background: var(--color-bg);
+    border: 1.5px solid #fff;
+    border-radius: 5px;
+    width: 7rem;
+    height: 2rem;
+    position: relative;
+}
+
+.navbar button:hover {
+    background: var(--color-logo-gradient);
+    -webkit-background-clip: border-box;
+    border-style: none;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 0 4px #ffffffe9;
+    transition: 0.2s;
+}
+
+.navbar button:hover::before {
+    content: '';
+    position: absolute;
+    background: var(--color-bg);
+    display: block;
+    width: calc(100% - calc(1.5px * 2));
+    height: calc(100% - calc(1.5px * 2));
+    top: 1.5px;
+    left: 1.5px;
+    border-radius: 5px;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.navbar button:hover p {
+    background: var(--color-logo-gradient);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: 0.3s;
+}
+
+
+/* ========================= home ========================= */
+
+#home .grid-home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#home .text-zone {
+    color: #ffffff
+}
+
+#home .text-zone .heading {
+    font-size: 3rem;
+    line-height: 3.3rem;
+    letter-spacing: 2px;
+}
+
+#home .text-zone p {
+    color: var(--color-normal-font);
+    line-height: 1.7rem;
+    margin: 1.7rem 0;
+}
+
+#home .text-zone button {
+    width: 10rem;
+    height: 2.9rem;
+    color: #fff;
+    background: var(--color-purple);
+    text-align: center;
+    border-radius: 3px;
+    border-style: none;
+    font-size: 1rem;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .text-zone button img { 
+    margin-left: 0.4rem;    
+}
+
+#home .text-zone button:hover img {
+    opacity: 0.8;
+}
+
+#home .text-zone button:hover {
+    color: rgb(219, 219, 219);
+    background: #4242a8;
+    cursor: pointer;
+}
+
+#home .image-zone {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#home .image-zone .image-profile {
+    width: 70%;
+    height: 90%;
+    background-image: url('/img/young-attractive-handsome-guy.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#home .image-zone .box {
+    border: 1.5px solid #ffffffcc;
+    border-radius: 15px;
+    width: 15rem;
+    height: 15rem;
+    transform: rotate(25deg);
+    position: absolute;
+    top: 10rem;
+    left: 7rem;    
+    z-index: -1;
+}
+
+.bg-box {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    z-index: -999;
+} 
+
+.cc {
+    background-image: url('/img/bg-box/cc.png');
+    top: 10%;
+    left: 75%;    
+    width: 2.2rem;
+    height: 2.6rem;
+}
+
+.tg {
+    background-image: url('/img/bg-box/tg.png');
+    top: 70%;
+    left: -15%;
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+.ln {
+    background-image: url('/img/bg-box/ln.png');
+    top: 20%;
+    left: -5%;
+    width: 3.1rem;
+    height: 0.8rem;
+}
+
+.plus {
+    background-image: url('/img/bg-box/plus.png');
+    top: 80%;
+    left: 80%;
+    width: 2rem;
+    height: 2rem;
+}
+
+/* ========================= video ========================= */
+
+#video .text-zone {   
+    display: flex;
+    justify-content: space-between;
+}
+
+#video .text-zone .heading {   
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+#video .text-zone p {   
+    color: var(--color-normal-font);
+    line-height: 1.7rem;
+}
+
+#video .img-video-container {
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+#video .img-video .image {
+    width: 100%;
+    height: auto;
+    
+}
+#video .img-video {
+    position: relative;    
+}
+
+#video .play_btn {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: 42%;
+    left: 45%;
+    cursor: pointer;
+}
+
+/* ========================= our-project ========================= */
+
+#our-project {
+    margin-top: 8rem;
+    height: 140vh;
+    position: relative;
+}
+
+#our-project .bg-box {
+    position: absolute;
+}
+
+#our-project .tg {
+    top: 20%;
+    left: 20%;
+}
+
+#our-project .plus {
+    top: 30%;
+    right: 20%;
+    transform: rotate(50deg);
+}
+
+#our-project .plus:nth-child(3) {
+    top: 94%;
+    left: 8%;
+    transform: rotate(20deg);
+}
+
+.flex-services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#our-project .heading {
+    font-size: 2.7rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+#our-project .services-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#our-project .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+#our-project .service h5 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+#our-project .service p {
+    text-align: center;
+    color: var(--color-normal-font);
+}
+
+/* ========================= portfolio ========================= */
+
+#about-us {
+    position: relative;
+}
+
+#about-us .bg-box {
+    position: absolute;
+}
+
+#about-us .cc {
+    top: 30%;
+    right: 20%;
+}
+
+#about-us .ln {
+    top: 80%;
+    left: 8%;
+}
+
+
+#about-us .heading {
+    color: #fff;
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+}
+
+#about-us .image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#about-us .image img {
+    width: 18rem;
+    height: fit-content;
+    margin-left: 3%;
+    cursor: pointer;
+}
+
+#about-us .image img:nth-child(2) {
+    margin-top: 4rem;
+}
+
+#about-us .image img:nth-child(3) {
+    margin-top: 8rem;
+}
+
+/* ========================= contact-us ========================= */
+
+#contact-us {
+    padding-top: 0;
+    margin-top: 6rem;
+    position: relative;
+}
+
+#contact-us .bg-box {
+    position: absolute;
+}
+
+#contact-us .plus {
+    top: 10%;
+    right: 20%;
+}
+
+#contact-us .cc {
+    top: 74%;
+    left: 13%;
+}
+
+#contact-us {
+    background: #1C1C1E;
+    width: 100%;
+    height: 60vh;
+}
+
+.flex-contact-us {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#contact-us button {
+    width: 8rem;
+    height: 2.8rem;
+    font-size: 1rem;
+    background: var(--color-purple);
+    color: #fff;
+    border-style: none;
+    border-radius: 3px;
+}
+
+#contact-us button:hover {
+    transition: 0.3s;
+    color: rgb(219, 219, 219);
+    background: #4242a8;
+    cursor: pointer;
+}
+
+/* ========================= footer ========================= */
+
+.footer {
+    height: 20vh;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.flex-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer .menu {
+    width: 35%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 2.5fr;
+    text-align: center;
+}
+
+.footer .menu li {
+    list-style: none;
+    
+}
+
+.footer .menu li a {
+    text-decoration: none;
+    color: #d8d8d8cf;   
+    font-size: 0.8rem; 
+}
+
+.footer .menu li a:hover {
+    color: #4242a8;   
+}
+
+.footer .copyright {
+    color: #d8d8d8cf;   
+    font-size: 0.8rem; 
+}

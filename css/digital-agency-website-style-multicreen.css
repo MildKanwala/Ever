@@ -1,0 +1,130 @@
+@media only screen and (max-width: 1098px) {
+
+    .container {
+        max-width: 90%;
+    }
+
+    /* ========================= home ========================= */
+
+    #home .text-zone .heading {
+        font-size: 3rem;
+        line-height: 3.2rem;
+    }
+
+    #home .text-zone p {
+        font-size: 0.83rem;
+        line-height: 1.5rem;
+        margin: 1.6rem 0;
+    }
+
+    #home .text-zone button {
+        font-size: 0.9rem;
+    }
+
+    #home .text-zone button img {
+        transform: scale(0.7);
+    }
+
+    #home .image-zone .image-profile {
+        transform: scale(0.8);
+        width: 100%;
+        height: 100%;
+    }
+
+    #home .image-zone .box {
+        transform: scale(0.8) rotate(25deg);
+    }
+
+}
+
+@media only screen and (max-width: 989px) {
+
+    .container {
+        max-width: 95%;
+    }
+
+    #home .image-zone .image-profile {
+        transform: scale(0.65);
+    }
+
+    #home .image-zone .box {
+        transform: scale(0.65) rotate(25deg);
+    }
+
+    /* ========================= video ========================= */
+
+    #video {
+        height: 110vh;
+    }
+
+}
+
+@media only screen and (max-width: 856px) {
+
+    /* ========================= video ========================= */
+
+    #video {
+        height: 90vh;
+        margin-bottom: 6rem;
+    }
+
+    #video .text-zone {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #video .img-video-container img {
+        height: 13%;
+    }
+
+    /* ========================= contact-us ========================= */
+
+    .flex-contact-us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #contact-us button {
+        margin-top: 2rem;
+    }
+
+    /* ========================= footer ========================= */
+
+    .footer .menu {
+        width: 45%;
+    }
+
+    /* ========================= portfolio ========================= */
+    #about-us {
+        height: 150vh;
+    }
+
+    #about-us .image {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #about-us .image img {
+        border-radius: 20px;
+        width: 19rem;
+    }
+
+    #about-us .image img:nth-child(2) {
+        margin-top: 0rem;
+    }
+
+    #about-us .image img:nth-child(3) {
+        margin-top: 0rem;
+    }
+
+    #about-us .image img:hover {
+        transition: 0.3s;
+        transform: scale(1.1);
+        box-shadow: 0 0 1rem rgba(255, 255, 255, 0.557);
+        cursor: pointer;
+    }
+
+}
